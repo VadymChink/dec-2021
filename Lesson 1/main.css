@@ -1,0 +1,38 @@
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    width: 800px;
+    margin: 0   auto;
+    background: #f3f3f3;
+}
+img{
+    width: 300px;
+}
+h1,
+.main{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    background: #ffffff;
+    border: 10px solid #f3f3f3;
+}
+li{
+    display: inline-block;
+    padding: 50px;
+
+}
+.link{
+    font-size: 30px;
+    color: #6750ff;
+}
+.link:hover{
+    color: crimson;
+    transition: .5s;
+}
+h2{
+    padding: 20px;
+}
