@@ -1,0 +1,40 @@
+* {
+box-sizing: border-box;
+    margin: 0;
+}
+body{
+    padding: 30px 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    border-bottom: 1px solid #232323;
+    border-top: 1px solid #dadada;
+    border-right: 1px solid #f1f1f1;
+}
+.lesson2{
+    background: #8a2628;
+    color: #f2ecda;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom:30px ;
+}
+.grey{
+    background: #bfbfbf;
+    height: 105px;
+    padding: 30px;
+}
+.blue{
+    background: #6394eb;
+    height: 140px;
+    padding: 60px 0;
+}
+.green {
+    background: #6bb967;
+    width: 275px;
+    height: 275px;
+}
+.mediumpurple{
+    background: #8785aa;
+    width: 275px;
+    height: 275px;
+    border-radius: 30px;
+}
