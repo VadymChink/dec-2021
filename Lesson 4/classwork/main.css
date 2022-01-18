@@ -1,0 +1,192 @@
+/*Resets*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,
+:active {
+    outline: none;
+}
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+button {
+    cursor: pointer;
+    background: none;
+}
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+a,
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+    line-height: 1;
+    font-size: 16px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+body {
+    background: #fafafa;
+    font-family: Arial, serif;
+    font-weight: 500;
+}
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.d_flex-flex_d-col{
+    display: flex;
+    flex-direction: column;
+}
+.d_flex-ai_c{
+    display: flex;
+    align-items: center;
+}
+.d_flex-jc_c-ai_c{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.b-r_20px{
+    border-radius: 20px ;
+}
+.circle{
+    border-radius: 50%;
+}
+.bg_cornflowerblue{
+    background: cornflowerblue;
+}
+.bg_darkblue{
+    background: darkblue;
+}
+.bg_grey{
+    background: #fafafa;
+}
+.bg_grey{
+    background: #ced8e1;
+}
+.color_w{
+    color: #ffffff;
+}
+.color_darkblue{
+    color: #102b3e;
+ }
+.h-50px{
+    height: 50px;
+}
+.h-100px{
+    height: 100px;
+}
+.h-150px{
+    height: 150px;
+}
+.w-1320px{
+    width: 1320px;
+}
+.padding_100px{
+    padding: 0 100px;
+}
+.flex-row-gap{
+    row-gap: 10px;
+}
+.flex-colum-gap_15px{
+    column-gap: 15px;
+}
+._button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 187px;
+    height: 48px;
+    border-radius: 37px;
+    margin: 0 10px;
+    background: #122940;
+    color: #3ac5e9;
+}
+/*-----------------------------------*/
+.navigator{
+    justify-content: end;
+}
+.menu{
+    width: 100%;
+    justify-content: space-between;
+}
+.logo{
+    font-size: 50px;
+}
+.main{
+    min-height: 1000px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
