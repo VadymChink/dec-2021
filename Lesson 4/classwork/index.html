@@ -5,12 +5,13 @@
 	<meta name="viewport"
 	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="https://kit.fontawesome.com/6c1760b5bc.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="main.css">
 	<title>classwork</title>
 </head>
-<body>
-	<div class="wrapper d_flex-flex_d-col d_flex-ai_c h-150px">
-		<header class="header h-150px">
+<body id="home">
+	<div class="wrapper d_flex-flex_d-col d_flex-ai_c">
+		<header class="header  h-150px">
 			<div class="header_content w-1320px ">
 				<nav class="navigator padding_100px d_flex-ai_c bg_cornflowerblue h-50px flex-colum-gap_15px">
 					<a class="color_w" href="#">Home</a>
@@ -18,29 +19,188 @@
 					<a class="color_w" href="#">Pricing</a>
 					<a class="color_w" href="#">Contacts</a>
 				</nav>
-				<div class="menu d_flex-jc_c-ai_c bg_grey padding_100px">
+				<div class="menu d_flex-jc_c-ai_c bg_grey justify-content padding_100px">
 					<div><a class="logo color_darkblue" href="#">Logo</a></div>
 					<ul class="d_flex-jc_c-ai_c h-100px flex-colum-gap_15px">
-						<li><a class="color_darkblue" href="#">Home</a></li>
-						<li><a class="color_darkblue" href="#">Achievements</a></li>
-						<li><a class="color_darkblue" href="#">Cards</a></li>
-						<li><a class="color_darkblue" href="#">Info</a></li>
+						<li><a class="color_darkblue" href="#home">Home</a></li>
+						<li><a class="color_darkblue" href="#Achievements">Achievements</a></li>
+						<li><a class="color_darkblue" href="#Cards">Cards</a></li>
+						<li><a class="color_darkblue" href="#Info">Info</a></li>
 					</ul>
 				</div>
 			</div>
 		</header>
-		<main class="main w-1320px bg_grey">
-			<div class="">
-				<h1>Дуже важливий заголовок</h1>
-				<h2>Якийсь там текст</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, nesciunt!</p>
+		<main  class="main w-1320px bg_grey">
+			<div  class="d_flex-jc_c-ai_c bg_cornflowerblue h-400px">
+				<div class="d_flex-flex_d-col d_flex-ai_c flex-row-gap">
+					<h1 class="padding_10px">Дуже важливий заголовок</h1>
+					<h2>Якийсь там текст</h2>
+					<p class="padding_10px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, nesciunt!</p>
+					<button class="_button">Кнопка</button>
+					<div id="Achievements"></div>
+				</div>
 			</div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
+			<div class="d_flex-flex_d-col d_flex-jc_c-ai_c h-400px flex-row-gap_50px margin_50px border b-r_50px">
+				<h2 >Achievements</h2>
+				<div class="d_flex-jc_c-ai_c flex-colum-gap_25px">
+					<div class="text-align">
+						<div class="h-150px w-200px bg_darkblue b-r_20px"></div>
+						<h2 class="padding_10px">Lorem ipsum.</h2>
+					</div>
+					<div class="text-align">
+						<div class="h-150px w-200px bg_darkblue b-r_20px"></div>
+						<h2 class="padding_10px">Lorem ipsum.</h2>
+					</div>
+					<div class="text-align">
+						<div class="h-150px w-200px bg_darkblue b-r_20px"></div>
+						<h2 class="padding_10px">Lorem ipsum.</h2>
+					</div>
+					<div class="text-align">
+						<div class="h-150px w-200px bg_darkblue b-r_20px"></div>
+						<h2 class="padding_10px">Lorem ipsum.</h2>
+					</div>
+				</div>
+			</div>
+			<div class="d_flex-jc_c-ai_c color_w h-400px bg_darkblue">
+				<div class="card d_flex-jc_c-ai_c w-250px h-300px d_flex-flex_d-col ">
+					<div class="circle h-150px w-150px bg_grey"></div>
+					<h2 class="padding_10px">Lorem ipsum.</h2>
+					<p>Lorem ipsum dolor.</p>
+				</div><div class="card d_flex-jc_c-ai_c w-250px h-300px  d_flex-flex_d-col ">
+					<div class="circle h-150px w-150px bg_grey"></div>
+					<h2 class="padding_10px">Lorem ipsum.</h2>
+					<p>Lorem ipsum dolor.</p>
+				</div><div class="card d_flex-jc_c-ai_c w-250px h-300px  d_flex-flex_d-col ">
+					<div class="circle h-150px w-150px bg_grey"></div>
+					<h2 class="padding_10px">Lorem ipsum.</h2>
+					<p>Lorem ipsum dolor.</p>
+				</div>
+				<div id="Cards"></div>
+			</div>
+			<div class="d_flex-flex_d-col d_flex-ai_c h-800px bg_grey">
+				<h2 class=" margin_50px">Cards</h2>
+				<div class="d_flex-jc_c-ai_c w-800px flex-colum-gap_25px flex-row-gap_25px flex-wrap">
+					<div class="h-300px w-250px border b-r_20px">
+						<div class="border-bottom h-250px">
+							<div class="h-100px bg_darkblue margin_10px b-r_20px"></div>
+							<div class="d_flex-jc_c-ai_c justify-content padding_0-10px">
+								<h2>lorem</h2>
+								<p>elit elit</p>
+							</div>
+							<h3 class="padding_10px">Lorem ipsum dolor.</h3>
+							<p class="padding_10px"> Lorem ipsum dolor sit amet, elit. Eos ex in ipsa praesentium</p>
+						</div>
+						<div class="d_flex-jc_c-ai_c h-50px justify-content padding_0-10px">
+							<p>Lorem</p>
+							<input type="button" value="More...">
+						</div>
+					</div>
+					<div class="h-300px w-250px border b-r_20px">
+						<div class="border-bottom h-250px">
+							<div class="h-100px bg_darkblue margin_10px b-r_20px"></div>
+							<div class="d_flex-jc_c-ai_c justify-content padding_0-10px">
+								<h2>lorem</h2>
+								<p>elit elit</p>
+							</div>
+							<h3 class="padding_10px">Lorem ipsum dolor.</h3>
+							<p class="padding_10px"> Lorem ipsum dolor sit amet, elit. Eos ex in ipsa praesentium</p>
+						</div>
+						<div class="d_flex-jc_c-ai_c h-50px justify-content padding_0-10px">
+							<p>Lorem</p>
+							<input type="button" value="More...">
+						</div>
+					</div>
+					<div class="h-300px w-250px border b-r_20px">
+						<div class="border-bottom h-250px">
+							<div class="h-100px bg_darkblue margin_10px b-r_20px"></div>
+							<div class="d_flex-jc_c-ai_c justify-content padding_0-10px">
+								<h2>lorem</h2>
+								<p>elit elit</p>
+							</div>
+							<h3 class="padding_10px">Lorem ipsum dolor.</h3>
+							<p class="padding_10px"> Lorem ipsum dolor sit amet, elit. Eos ex in ipsa praesentium</p>
+						</div>
+						<div class="d_flex-jc_c-ai_c h-50px justify-content padding_0-10px">
+							<p>Lorem</p>
+							<input type="button" value="More...">
+						</div>
+					</div>
+					<div class="h-300px w-250px border b-r_20px">
+						<div class="border-bottom h-250px">
+							<div class="h-100px bg_darkblue margin_10px b-r_20px"></div>
+							<div class="d_flex-jc_c-ai_c justify-content padding_0-10px">
+								<h2>lorem</h2>
+								<p>elit elit</p>
+							</div>
+							<h3 class="padding_10px">Lorem ipsum dolor.</h3>
+							<p class="padding_10px"> Lorem ipsum dolor sit amet, elit. Eos ex in ipsa praesentium</p>
+						</div>
+						<div class="d_flex-jc_c-ai_c h-50px justify-content padding_0-10px">
+							<p>Lorem</p>
+							<input type="button" value="More...">
+						</div>
+					</div>
+					<div class="h-300px w-250px border b-r_20px">
+						<div class="border-bottom h-250px">
+							<div class="h-100px bg_darkblue margin_10px b-r_20px"></div>
+							<div class="d_flex-jc_c-ai_c justify-content padding_0-10px">
+								<h2>lorem</h2>
+								<p>elit elit</p>
+							</div>
+							<h3 class="padding_10px">Lorem ipsum dolor.</h3>
+							<p class="padding_10px"> Lorem ipsum dolor sit amet, elit. Eos ex in ipsa praesentium</p>
+						</div>
+						<div class="d_flex-jc_c-ai_c h-50px justify-content padding_0-10px">
+							<p>Lorem</p>
+							<input type="button" value="More...">
+						</div>
+					</div>
+					<div class="h-300px w-250px border b-r_20px">
+						<div class="border-bottom h-250px">
+							<div class="h-100px bg_darkblue margin_10px b-r_20px"></div>
+							<div class="d_flex-jc_c-ai_c justify-content padding_0-10px">
+								<h2>lorem</h2>
+								<p>elit elit</p>
+							</div>
+							<h3 class="padding_10px">Lorem ipsum dolor.</h3>
+							<p class="padding_10px"> Lorem ipsum dolor sit amet, elit. Eos ex in ipsa praesentium</p>
+						</div>
+						<div class="d_flex-jc_c-ai_c h-50px justify-content padding_0-10px">
+							<p>Lorem</p>
+							<input type="button" value="More...">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="Info" class="d_flex-jc_c-ai_c h-600px bg_grey">
+				<div class="info_card d_flex-jc_c-ai_c w-400px h-300px bg_cornflowerblue color_darkblue">
+					<div class="d_flex-flex_d-col w-300px">
+						<h2 class="padding_10px">Lorem ipsum dolor</h2>
+						<p class="padding_10px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum eos
+							ipsum qui ratione sint,
+							vitae.</p>
+						<button class="_button">Кнопка</button>
+					</div>
+				</div>
+				<div class="info_card d_flex-jc_c-ai_c w-400px h-300px bg_cornflowerblue color_darkblue">
+					<div class="d_flex-flex_d-col w-300px">
+						<h2 class="padding_10px">Lorem ipsum dolor</h2>
+						<p class="padding_10px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum eos
+							ipsum qui ratione sint,
+							vitae.</p>
+						<button class="_button ">Кнопка</button>
+					</div>
+				</div>
+			</div>
 		</main>
-		<footer class="footer bg_darkblue h-150px"></footer>
+		<footer class="footer d_flex-flex_d-col d_flex-ai_c bg_darkblue color_w h-150px w-1320px">
+			<div class="d_flex-jc_c-ai_c flex-colum-gap_25px h-100px">
+				<a href="#"><i class="fab color_w fa-instagram"></i></a>
+				<a href="#"><i class="fab color_w fa-facebook-f"></i></a>
+				<a href="#"><i class="fab color_w fa-twitter"></i></a>
+			</div>
+				<p>Lorem ipsum dolor sit amet.</p>
+		</footer>
 	</div>
 </body>
 </html>

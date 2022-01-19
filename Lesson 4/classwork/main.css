@@ -35,7 +35,7 @@ textarea {
 input::-ms-clear {
     display: none;
 }
-button {
+input, button {
     cursor: pointer;
     background: none;
 }
@@ -84,7 +84,6 @@ body {
 .wrapper {
     min-height: 100%;
     width: 100%;
-    overflow: hidden;
     margin: 0 auto;
 }
 .d_flex-flex_d-col{
@@ -100,8 +99,25 @@ body {
     justify-content: center;
     align-items: center;
 }
+.justify-content{
+    justify-content: space-between;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.text-align{
+    text-align: center;
+}
+.border{
+    border: 2px solid #3ac5e9;
+}
+.border-bottom{
+    border-bottom: 2px solid #3ac5e9;
+}
 .b-r_20px{
     border-radius: 20px ;
+}.b-r_50px{
+    border-radius: 50px ;
 }
 .circle{
     border-radius: 50%;
@@ -110,13 +126,10 @@ body {
     background: cornflowerblue;
 }
 .bg_darkblue{
-    background: darkblue;
+    background: #102b3e;
 }
 .bg_grey{
-    background: #fafafa;
-}
-.bg_grey{
-    background: #ced8e1;
+    background: #cdd7e0;
 }
 .color_w{
     color: #ffffff;
@@ -133,47 +146,109 @@ body {
 .h-150px{
     height: 150px;
 }
+.h-250px{
+    height: 230px;
+}
+.h-300px{
+    height: 300px;
+}
+.h-400px{
+    height: 400px;
+}
+.h-600px{
+    height: 600px;
+}
+.h-900px{
+    height: 900px;
+}
+.w-150px{
+    width: 150px;
+}
+.w-200px{
+    width: 200px;
+}
+.w-250px{
+    width: 250px;
+}
+.w-300px{
+    width: 300px;
+}
+.w-400px{
+    width: 400px;
+}
+.w-800px{
+    width: 800px;
+}
 .w-1320px{
     width: 1320px;
+}
+.padding_10px{
+    padding: 10px;
+}
+.padding_0-10px{
+    padding: 0 10px;
 }
 .padding_100px{
     padding: 0 100px;
 }
+.margin_10px{
+    margin: 10px;
+}
+.margin_50px{
+    margin: 50px;
+}
 .flex-row-gap{
     row-gap: 10px;
+}
+.flex-row-gap_25px{
+    row-gap: 25px;
+}
+.flex-row-gap_50px{
+    row-gap: 50px;
 }
 .flex-colum-gap_15px{
     column-gap: 15px;
 }
+.flex-colum-gap_25px{
+    column-gap: 25px;
+}
 ._button {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 187px;
     height: 48px;
     border-radius: 37px;
-    margin: 0 10px;
+    margin: 40px 0 0;
     background: #122940;
     color: #3ac5e9;
+    font-size: 24px;
 }
 /*-----------------------------------*/
+.header{
+    position: fixed;
+}
 .navigator{
     justify-content: end;
 }
-.menu{
-    width: 100%;
-    justify-content: space-between;
-}
-.logo{
+.logo, i{
     font-size: 50px;
 }
 .main{
     min-height: 1000px;
+    margin-top: 150px;
 }
-
-
-
+._button:hover{
+    background: #6495ed;
+    color: #122940;
+}
+.card:hover{
+    border: 1px solid #3ac5e9;
+}
+.info_card:hover{
+    background:#122940 ;
+    color: #6494ec;
+}
 
 
 
