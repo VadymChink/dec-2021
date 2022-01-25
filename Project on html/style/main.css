@@ -1,0 +1,363 @@
+:root{
+    --black-color: #000000 ;
+    --grey:#375361;
+    --darkblue-color: #0B2330;
+    --yellow-color: #F9C600;
+}
+/*Resets*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,
+:active {
+    outline: none;
+}
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+button {
+    cursor: pointer;
+    background: none;
+}
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+a,
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+    margin: 0;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+    line-height: 1;
+    font-size: 17px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+body {
+    background: #c3c8cc;
+    font-family: 'Roboto', sans-serif;
+}
+.wrapper {
+    min-height: 100%;
+    /*overflow: hidden;*/
+    max-width: 1440px;
+    margin: 0 auto;
+    background: #fdfdfe;
+    color: var(--darkblue-color);
+}
+/* tech class */
+._btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 24px;
+    border-radius: 4px;
+    color: var(--black-color);
+    border: 1px solid var(--darkblue-color);
+    padding: 15px 29px;
+    height: 54px;
+}
+._btn_yellow {
+    border: none;
+    color: var(--darkblue-color);
+    background: var(--yellow-color);
+}
+._btn:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px 7px rgba(34, 60, 80, 0.2);
+    transition: box-shadow 0.5s, transform 0.5s;
+}
+.d_flex-ai_c{
+    display: flex;
+    align-items: center;
+}
+.title60px{
+    font-size: 60px;
+    line-height: 64px;
+    letter-spacing: 0.6px;
+}
+.title_h2{
+    font-size: 42px;
+    line-height: 48px;
+    letter-spacing: 0.42px;
+}
+.title_h3{
+    font-size: 34px;
+    line-height: 40px;
+    letter-spacing: 0.34px;
+}
+.title_h4{
+    font-size: 22px;
+    line-height: 32px;
+}
+.p_txt{
+    font-size: 17px;
+    line-height: 28px;
+}
+.color_grey{
+    color: var(--grey);
+}
+/*--------------Header--------------------------------------*/
+.header_nav{
+    justify-content: space-between;
+    padding: 15px 32px ;
+}
+.logo p {
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--black-color);
+}
+.nav{
+    column-gap: 145px;
+}
+.nav_list{
+    column-gap: 45px;
+}
+.button_list{
+    column-gap: 30px;
+}
+a{
+    color: var(--darkblue-color);
+    font-size: 16px;
+}
+.down_list a{
+    color: var(--black-color);
+    padding-right: 10px;
+    font-size: 16px;
+}
+.fa-chevron-down{
+    font-size: 12px;
+}
+.btn_start{
+    border: none;
+    color: #ffffff;
+    background: var(--darkblue-color);
+    width: 165px;
+}
+.header_content{
+    position: relative;
+    z-index: 2;
+    height: 886px;
+    display: flex;
+    justify-content: center;
+    column-gap: 120px;
+    padding-top: 160px;
+}
+.background_header{
+    position: absolute;
+}
+.header_txt{
+    width: 425px;
+}
+.header_txt h4{
+    margin: 40px 0;
+}
+.btn_header_content{
+    column-gap: 15px;
+}
+.header_img img{
+    padding-top: 30px;
+    width: 600px;
+}
+/*-------------Main------------------------*/
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*-------------Section 1-----------------------*/
+
+.companies_block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 195px 0;
+}
+.companies_title{
+    width: 700px;
+    text-align: center;
+    padding-bottom: 55px;
+}
+.companies{
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1140px;
+}
+.companies>div>img{
+    flex: 20%;
+}
+/*-------------Section 2-----------------------*/
+.product_teams{
+    background: #51CEBC;
+    width: 1376px;
+    padding: 56px 0;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 192px;
+}
+.product_teams_txt{
+    width: 550px;
+}
+.product_teams_txt h3{
+     padding-bottom: 32px;
+}
+/*-------------Section 3-----------------------*/
+.analytics{
+    flex-direction: column;
+    row-gap: 35px;
+}
+.analytics_txt{
+    width: 715px;
+}
+.analytics_btn{
+    padding: 115px 0 160px;
+}
+/*-------------Section 4-----------------------*/
+.actual_users{
+    width: 1260px;
+    height: 540px;
+    background: #BD78F0;
+    column-gap: 135px;
+    margin: 0 32px 180px 150px;
+    justify-content: end;
+    position: relative;
+}
+.actual_users_txt{
+    width: 560px;
+    padding-right: 115px;
+}.actual_users_txt h2{
+     padding-bottom: 35px;
+}
+.actual_users img{
+    position: absolute;
+    left: -115px;
+}
+/*-------------Section 4-----------------------*/
+.solutions{
+    padding:0 35px 0 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 1440px;
+    row-gap: 155px;
+}
+.solutions_title{
+    width: 570px;
+    padding-bottom: 70px;
+}
+.solutions_title h2{
+    padding-bottom: 25px;
+}
+.solutions_sup_title{
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #6A7981;
+    padding-bottom: 15px;
+}
+.solutions_card{
+    column-gap: 235px;
+}
+.solutions_card_title{
+    padding: 24px 0;
+}
+.solutions_btn{
+    margin-top: 40px;
+}
+.solutions_list{
+    column-gap: 10px;
+}
+.solutions_list a{
+    color: #61757E;
+    background: #E7EAEB;
+    border-radius: 4px;
+    padding: 8px 13px ;
+    margin: 65px 0 150px;
+
+}
+.solutions_list_m_hover:hover {
+    background: #BD78F0;
+    color: var(--black-color);
+    transition: 0.3s;
+}
+.solutions_list_q_hover:hover {
+    background: #51CEBC;
+    color: var(--black-color);
+    transition: 0.3s;
+}
+.solutions_list_t_hover:hover {
+    background: #FE9F28;
+    color: var(--black-color);
+    transition: 0.3s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
