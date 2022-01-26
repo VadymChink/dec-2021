@@ -73,6 +73,9 @@ h6 {
     font-weight: 400;
     margin: 0;
 }
+p{
+    margin: 0;
+}
 html,
 body {
     height: 100%;
@@ -90,7 +93,7 @@ body {
 .wrapper {
     min-height: 100%;
     /*overflow: hidden;*/
-    max-width: 1440px;
+    width: 1440px;
     margin: 0 auto;
     background: #fdfdfe;
     color: var(--darkblue-color);
@@ -214,7 +217,6 @@ a{
 .main{
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 /*-------------Section 1-----------------------*/
 
@@ -255,13 +257,13 @@ a{
 /*-------------Section 3-----------------------*/
 .analytics{
     flex-direction: column;
-    row-gap: 35px;
+    row-gap: 55px;
 }
 .analytics_txt{
     width: 715px;
 }
 .analytics_btn{
-    padding: 115px 0 160px;
+    padding: 95px 0 160px;
 }
 /*-------------Section 4-----------------------*/
 .actual_users{
@@ -342,18 +344,62 @@ a{
     color: var(--black-color);
     transition: 0.3s;
 }
-
-
-
-
-
-
-
-
-
-
-
-
+/*-------------Section 5-----------------------*/
+.features{
+    background: #f2ede7;
+    height: 960px;
+}
+.features_title{
+    padding: 95px 270px 115px 150px;
+}
+.features_content{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 150px;
+}
+.accordion{
+    width: 590px;
+    /*border-top: 2px solid #C9316F;*/
+}
+.accordion::before{
+    content: "";
+    display: block;
+    width: 550px;
+    height: 2px;
+    background-color: #C9316F;
+    margin: 0 21px;
+    position: relative;
+    top: -25px;
+    z-index: 3;
+}
+.accordion-button , .accordion-item, .accordion-button:focus{
+    background: #f2ede7;
+    color: var(--darkblue-color);
+}
+.accordion-button:focus {
+    border: none ;
+    box-shadow: none;
+}
+.accordion-button:not(.collapsed) {
+    color: var(--darkblue-color);
+    background-color: #f2ede7;
+    box-shadow: none;
+}
+.accordion-paragraph{
+    padding: 40px 0;
+}
+/*-------------Section 6-----------------------*/
+.integrations{
+    display: flex;
+    padding: 160px 0 160px 150px;
+    column-gap: 65px;
+}
+.integrations_txt{
+    width: 670px;
+}
+.integrations_sub_title{
+    padding: 35px 0;
+}
 
 
 
