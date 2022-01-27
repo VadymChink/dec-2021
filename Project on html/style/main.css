@@ -101,7 +101,7 @@ body {
     background: #fdfdfe;
     color: var(--darkblue-color);
 }
-/* tech class */
+/*-------------tech class ---------------------------*/
 ._btn {
     display: flex;
     align-items: center;
@@ -177,7 +177,8 @@ body {
     padding: 15px 32px ;
     position: fixed;
     z-index: 9;
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px ;
     background: #ffffff;
 }
 .logo p {
