@@ -128,7 +128,7 @@
 }
 @media screen and (min-width: 902px) and (max-width:1040px){
     body{
-        font-size: 12px;
+        font-size: 16px;
     }
     .wrapper{
         padding: 0 10px;
@@ -223,28 +223,44 @@
         margin: 20px 0 100px;
     }
     /*-------------Section 6-------------------------*/
+    .features {
+        height: 900px;
+    }
     .features_title {
-        padding: 95px 270px 115px 30px;
+        padding: 60px 270px 115px 30px;
     }
     .features_content {
         padding: 0 30px;
     }
+    .accordion {
+        width: 450px;
+    }
+    .accordion::before {
+        width: 410px;
+    }
     /*-------------Section 7-------------------------*/
     .integrations {
-        padding: 160px 0 120px 30px;
-        column-gap: 65px;
+        padding: 160px 20px 120px 30px;
+        column-gap: 25px;
+        align-items: center;
+    }
+    .integrations img{
+        width: 100%;
     }
     /*-------------Section 8-------------------------*/
+    .case_study {
+        height: 550px;
+    }
     .case_study_txt {
-        padding: 80px 90px;
+        padding: 70px 40px;
     }
     .case_study_content_txt {
         font-size: 28px;
         line-height: 40px;
-        padding: 80px 80px;
+        padding: 60px 50px;
     }
     .case_study_content_manager {
-        padding-left: 80px;
+        padding-left: 40px;
         column-gap: 20px;
     }
     /*---------------Footer--------------------------*/
@@ -256,13 +272,13 @@
     }
     .footer_sub {
         padding-left: 30px;
-        column-gap: 60px;
+        column-gap: 40px;
     }
     .Copyright {
-        padding-left: 240px;
+        padding-left: 220px;
     }
     .media {
-        padding-bottom: 115px;
+        padding-bottom: 100px;
     }
 }
 @media screen and (min-width: 1041px) and (max-width:1290px){
