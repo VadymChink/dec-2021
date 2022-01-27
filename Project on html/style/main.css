@@ -95,8 +95,8 @@ body {
 }
 .wrapper {
     min-height: 100%;
-    overflow: hidden;
-    width: 1440px;
+    /*overflow: hidden;*/
+    max-width: 1440px;
     margin: 0 auto;
     background: #fdfdfe;
     color: var(--darkblue-color);
@@ -220,7 +220,7 @@ a{
 }
 .header_content{
     position: relative;
-    z-index: 2;
+    z-index: 1;
     height: 886px;
     display: flex;
     justify-content: center;
@@ -229,6 +229,11 @@ a{
 }
 .background_header{
     position: absolute;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .header_txt{
     width: 425px;
@@ -302,7 +307,6 @@ a{
     width: 1260px;
     height: 540px;
     background: #BD78F0;
-    column-gap: 135px;
     margin: 0 32px 180px 150px;
     justify-content: end;
     position: relative;
@@ -317,7 +321,7 @@ a{
     position: absolute;
     left: -115px;
 }
-/*-------------Section 4-----------------------*/
+/*-------------Section 5-----------------------*/
 .solutions{
     padding:0 35px 0 150px;
     display: flex;
@@ -389,7 +393,7 @@ a{
     color: var(--black-color);
     transition: 0.3s;
 }
-/*-------------Section 5-----------------------*/
+/*-------------Section 6-----------------------*/
 .features{
     background: #f2ede7;
     height: 960px;
@@ -433,7 +437,7 @@ a{
 .accordion-paragraph{
     padding: 40px 0;
 }
-/*-------------Section 6-----------------------*/
+/*-------------Section 7-----------------------*/
 .integrations{
     display: flex;
     padding: 160px 0 160px 150px;
@@ -445,13 +449,13 @@ a{
 .integrations_sub_title{
     padding: 35px 0;
 }
-/*-------------Section 7-----------------------*/
+/*-------------Section 8-----------------------*/
 .wrap_case_study{
     justify-content: center;
-
 }
 .case_study{
     width: 1375px;
+    height: 600px;
     margin-bottom: 45px;
 }
 .case_study_title{
@@ -459,8 +463,8 @@ a{
     line-height: 32px;
 }
 .case_study_txt{
-    width: 580px;
-    height: 640px;
+    width: 45%;
+    height: 100%;
     background: #f2ede7;
     padding: 80px 115px;
 }
@@ -468,9 +472,9 @@ a{
     padding: 25px 0 40px;
 }
 .case_study_content{
-    width: 795px;
+    width: 55%;
+    height: 100%;
     background: var(--yellow-color);
-    padding: 80px 0;
     position: relative;
 }
 .case_study_content_txt{

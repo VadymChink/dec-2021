@@ -1,3 +1,7 @@
 const btn = document.querySelector(  '.burger_menu') ;
 const menu = document.querySelector(  '.nav' ) ;
-btn.onclick = () => menu.classList.toggle("active");
+const burger = document.querySelector(  '.burger_menu_item' );
+btn.onclick = () => {
+    menu.classList.toggle("active");
+    burger.classList.toggle("active");
+}
