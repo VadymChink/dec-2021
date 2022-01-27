@@ -106,8 +106,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 0.94em;
+    line-height: 150%;
     border-radius: 4px;
     color: var(--black-color);
     border: 1px solid var(--darkblue-color);
@@ -133,31 +133,31 @@ body {
     align-items: flex-end;
 }
 .title60px{
-    font-size: 60px;
-    line-height: 64px;
+    font-size: 3.5em;
+    line-height: 107%;
     letter-spacing: 0.6px;
 }
 .title_h2{
-    font-size: 42px;
-    line-height: 48px;
+    font-size: 2.47em;
+    line-height: 114%;
     letter-spacing: 0.42px;
 }
 .title_h3{
-    font-size: 34px;
-    line-height: 40px;
+    font-size: 2em;
+    line-height: 118%;
     letter-spacing: 0.34px;
 }
 .title_h4{
-    font-size: 22px;
-    line-height: 32px;
+    font-size: 1.294em;
+    line-height: 145%;
 }
 .p_txt{
-    font-size: 17px;
-    line-height: 28px;
+    font-size: 1em;
+    line-height: 165%;
 }
 .p_txt_16{
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 0.941em;
+    line-height: 150% ;
 }
 .color_grey{
     color: var(--grey);
@@ -182,8 +182,8 @@ body {
     background: #ffffff;
 }
 .logo p {
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 0.7em;
+    line-height: 133%;
     color: var(--black-color);
 }
 .nav{
@@ -197,20 +197,20 @@ body {
 }
 a{
     color: var(--darkblue-color);
-    font-size: 16px;
+    font-size: 0.94em;
 }
 .down_list a:hover, a:hover{
     color: #fe9f28;
 }
 .down_list a{
     color: var(--black-color);
-    font-size: 16px;
+    font-size: 0.94em;
 }
 .down_list i{
     padding-left: 10px;
 }
 .fa-chevron-down{
-    font-size: 12px;
+    font-size: 0.7em;
 }
 .btn_start{
     border: none;
@@ -338,8 +338,8 @@ a{
     padding-bottom: 25px;
 }
 .solutions_sup_title{
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 0.82em;
+    line-height: 171%;
     letter-spacing: 1.4px;
     text-transform: uppercase;
     color: #6A7981;
@@ -459,8 +459,8 @@ a{
     margin-bottom: 45px;
 }
 .case_study_title{
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.41em;
+    line-height: 133%;
 }
 .case_study_txt{
     width: 45%;
@@ -543,15 +543,15 @@ a{
     padding-bottom: 215px;
 }
 .Copyright{
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.82em;
+    line-height: 143%;
     padding-left: 270px;
 }
 .ico_media{
     padding-right: 150px;
 }
 .ico_media a{
-    font-size: 26px;
+    font-size: 1.53em;
     color: #94A0A4;
     padding-left: 24px;
 }
