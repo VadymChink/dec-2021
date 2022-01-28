@@ -769,7 +769,14 @@
 }
 
 /*---------------max-width: 375px---------------------------------------------------------*/
-
+@media screen and (max-width: 405px){
+  .features {
+    height: 650px;
+  }
+  .title60px {
+    font-size: 3em;
+  }
+}
 @media screen and (max-width: 375px) {
   body {
     font-size: 12px;
