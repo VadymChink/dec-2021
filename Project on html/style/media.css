@@ -1,831 +1,804 @@
-@import url('main.css');
-@media screen and (max-width:902px){
-    .burger_menu{
-        justify-content: center;
-        border-radius: 10px;
-        border: 2px solid var(--black-color) ;
-        height: 50px;
-        width: 50px;
-        position: fixed;
-        right: 10px;
-        top: 5px;
-        z-index: 10;
-        cursor: pointer;
-    }
-    .burger_menu:hover{
-        box-shadow: 0 0 15px 7px rgba(34, 60, 80, 0.2);
-        transition: box-shadow 0.5s, transform 0.5s;
-    }
-    .burger_menu_item{
-        height: 5px;
-        width: 40px;
-        border-radius: 10px;
-        background: var(--grey);
-    }
-    .burger_menu_item::before, .burger_menu_item::after{
-        content: "";
-        height: 5px;
-        width: 40px;
-        border-radius: 10px;
-        background: var(--grey);
-    }
-    .burger_menu_item::before{
-        position: absolute;
-        top: 10px;
-    }
-    .burger_menu_item::after{
-        position: absolute;
-        bottom: 10px;
-    }
-    .nav{
-        position: absolute;
-        background: var(--bs-gray);
-        top: 55px;
-        right: -100%;
-        height: 600px;
-        width: 70%;
-    }
-    .nav, .nav_list, .button_list{
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-    .active{
-        right: 0;
-        transition: 0.3s;
-    }
-    .burger_menu_item.active::before{
-        position: absolute;
-        top: 20px;
-        transform: rotate(45deg);
-    }
-    .burger_menu_item.active::after{
-        position: absolute;
-        bottom: 20px;
-        transform: rotate(-45deg);
-    }
-    .burger_menu_item.active{
-        background: none;
-    }
-    .background_header{
-         object-position: right
-     }
+@import url("main.css");
+@media screen and (max-width: 902px) {
+  body.lock {
+    overflow: hidden;
+  }
+  .burger_menu {
+    justify-content: center;
+    border-radius: 10px;
+    border: 2px solid var(--black-color);
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    right: 10px;
+    top: 5px;
+    z-index: 10;
+    cursor: pointer;
+    overflow: auto;
+  }
+  .burger_menu:hover {
+    box-shadow: 0 0 15px 7px rgba(34, 60, 80, 0.2);
+    transition: box-shadow 0.5s, transform 0.5s;
+  }
+  .burger_menu_item {
+    height: 5px;
+    width: 40px;
+    border-radius: 10px;
+    background: var(--grey);
+  }
+  .burger_menu_item::before,
+  .burger_menu_item::after {
+    content: "";
+    height: 5px;
+    width: 40px;
+    border-radius: 10px;
+    background: var(--grey);
+  }
+  .burger_menu_item::before {
+    position: absolute;
+    top: 10px;
+  }
+  .burger_menu_item::after {
+    position: absolute;
+    bottom: 10px;
+  }
+  .nav {
+    position: fixed;
+    background: url(../img/background_header.png) #ffffff fixed no-repeat center;
+    top: 55px;
+    right: -100%;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    padding: 30px 20px 50px;
+  }
+
+  .nav_list a,
+  .button_list a {
+    font-size: 26px;
+  }
+  li {
+    padding: 20px 0;
+  }
+  .button_list {
+    padding-top: 30px;
+  }
+  .button_list li {
+    padding: 10px 0;
+  }
+  .active {
+    right: 0;
+    transition: 0.3s;
+  }
+  .nav,
+  .nav_list,
+  .button_list {
+    display: block;
+  }
+  .burger_menu_item.active::before {
+    position: absolute;
+    top: 20px;
+    transform: rotate(45deg);
+  }
+  .burger_menu_item.active::after {
+    position: absolute;
+    bottom: 20px;
+    transform: rotate(-45deg);
+  }
+  .burger_menu_item.active {
+    background: none;
+  }
+  .background_header {
+    object-position: right;
+  }
+}
+@media screen and (max-width: 700px) {
+  /*-------------Section 5-------------------------*/
+  .solutions_card {
+    max-width: 500px;
+  }
+  .solutions_card > div > img {
+    display: none;
+  }
 }
 /*------------------------------------------------------*/
-@media screen and (max-width:425px){
-    .header_nav {
-        padding: 5px 10px;
-    }
-    .nav{
-        width: 100%;
-        height: 600px;
-        row-gap: 30px;
-    }
-    .nav_list {
-        row-gap: 25px;
-    }
-    .nav_list a, .button_list a{
-        font-size: 26px;
-    }
-    .button_list{
-        row-gap: 15px;
-    }
-}
-@media screen and (min-width: 426px) and (max-width:700px){
-    /*-------------Section 5-------------------------*/
-    .solutions_card {
-        max-width: 500px;
-    }
-    .solutions_card>div>img{
-        display: none;
-    }
-}
-@media screen and (min-width: 426px) and (max-width:768px){
-    body{
-        font-size: 13px;
-    }
-    .header_nav {
-        padding: 5px 10px;
-    }
-    .nav{
-          width: 80%;
-          row-gap: 30px;
-      }
-    .nav_list {
-        row-gap: 25px;
-    }
-    .nav_list a, .button_list a{
-        font-size: 26px;
-    }
-    .button_list{
-        row-gap: 15px;
-    }
-    .header_content {
-        height: 450px;
-        padding: 90px 5px 0;
-        column-gap: 0;
-    }
-    .header_txt {
-        width: 550px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .header_txt h4 {
-        color: var(--black-color);
-    }
-    .header_img img {
-        display: none;
-    }
-    .background_header{
-        object-position: right;
-    }/*-------------Section 1-----------------------*/
-    .companies_block {
-        padding: 30px 0;
-    }
-    .companies_title {
-        width: 100%;
-        text-align: center;
-        padding-bottom: 20px;
-    }
-    .companies {
-        width: 100%;
-    }
-    .companies>div{
-        width: 120px;
-    }.companies>div>img{
-         width: 100%;
-    }
-    /*-------------Section 2-----------------------*/
-    .product_teams {
-        flex-direction: column-reverse;
-        width: 98%;
-        padding: 20px 20px;
-        margin-bottom: 30px;
-    }
-    .product_teams img{
-        width: 90%;
-    }
-    .product_teams_txt h3 {
-        padding-bottom: 15px;
-    }
-    .product_teams_txt{
-        width: 100%;
-    }
-    /*-------------Section 3-----------------------*/
-    .analytics {
-        row-gap: 15px;
-    }
-    .analytics_img{
-        display: flex;
-        justify-content: center;
-    }
-    .analytics_txt {
-        width: 95%;
-        text-align: center;
-    }
-    .analytics img{
-        width: 95%;
-    }
-    .analytics_btn {
-        padding: 15px 0 30px;
-    }
-    /*-------------Section 4-----------------------*/
-    .actual_users {
-        width: 100%;
-        height: 300px;
-        margin: 30px 0;
-    }
-    .actual_users img {
-        display: none;
-    }
-    .actual_users_txt {
-        width: 95%;
-        padding-right: 20px;
-    }
-    /*-------------Section 5-------------------------*/
-    .solutions {
-        padding: 0 5px;
-        width: 100%;
-        row-gap: 10px;
-    }
-    .solutions_title {
-        width: 98%;
-        padding-bottom: 15px;
-    }
-    .solutions_card {
-        column-gap: 15px;
-        align-items: center;
-    }
-    .microsurveys, .questions, .testing {
-        margin-top: 65px;
-    }
-    .solutions_card>div>img{
-        width: 350px;
-    }
-    .solutions_list a {
-        margin: 20px 0 70px;
-    }
-    /*-------------Section 6-------------------------*/
-    .features {
-        height: 700px;
-    }
-    .features_title {
-        padding: 10px 10px 40px;
-    }
-    .features_content {
-        padding: 0 ;
-        justify-content: start;
-    }
-    .features_content>div>img{
-        display: none;
-    }
-    .accordion {
-        width: 100%;
-    }
-    .accordion::before {
-        width: 90%;
-    }
-    /*-------------Section 7-------------------------*/
-    .integrations {
-        padding: 50px 20px 50px 30px;
-        row-gap: 25px;
-        flex-direction: column;
-        align-items: center;
-    }
-    .integrations_txt {
-        width: 95%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .integrations img{
-        width: 90%;
-        padding-left: 10%;
-    }
-    /*-------------Section 8-------------------------*/
-    .case_study {
-        height: 800px;
-        width: 100%;
-        flex-direction: column;
-    }
-    .case_study_txt {
-        padding: 10% 30px;
-        width: 100%;
-        height: 50%;
-    }
-    .case_study_content_txt {
-        font-size: 28px;
-        line-height: 40px;
-        padding: 10% 20px;
-    }
-    .case_study_content {
-        width: 100%;
-    }
-    .case_study_content_manager {
-        padding-left: 20px;
-        column-gap: 20px;
-    }
-    /*---------------Footer--------------------------*/
-    .footer{
-        row-gap: 55px;
-    }
-    .footer_sup {
-        padding-top: 20px;
-    }
-    .footer_sup button {
-        margin-bottom: 20px;
-    }
-    .footer_sup_txt {
-         width: 98%;
-     }
-    .footer_sup::after {
-        width: 94%;
-    }
-    .footer_sub {
-        padding: 0 5%;
-        column-gap: 10px;
-        position: relative;
-    }
-    .footer_sub img{
-        position: absolute;
-        top: -50px;
-        left: 15px;
-    }
-    .Copyright {
-        padding-left: 10px;
-    }
-    .media {
-        padding-bottom: 20px;
-    }
-    .ico_media {
-        padding-right: 30px;
-    }
-}
-@media screen and (min-width: 769px) and (max-width:901px){
-    body{
-        font-size: 14px;
-    }
-    .wrapper{
-         padding: 0 5px;
-     }
-    .header_nav {
-        padding: 5px 10px;
-    }
-    .nav{
-          width: 60%;
-          row-gap: 30px;
-      }
-    .nav_list {
-        row-gap: 25px;
-    }
-    .nav_list a, .button_list a{
-        font-size: 26px;
-    }
-    .button_list{
-        row-gap: 15px;
-    }
-    .header_content {
-        height: 570px;
-        column-gap: 20px;
-        padding: 90px 5px 0;
-    }
-    .header_img img {
-        width: 420px;
-        padding-top: 50px;
-    }
-    .background_header{
-        object-position: right
-    }/*-------------Section 1-----------------------*/
-    .companies_block {
-        padding: 50px 0;
-    }
-    .companies {
-        width: 100%;
-    }
-    /*-------------Section 2-----------------------*/
-    .product_teams {
-        width: 98%;
-        padding: 40px 20px;
-        margin-bottom: 50px;
-    }
-    .product_teams img{
-        width: 90%;
-    }
-    .product_teams_txt{
-        flex: 90%;
-    }
-    /*-------------Section 3-----------------------*/
-    .analytics {
-        row-gap: 45px;
-    }
-    .analytics_img{
-        display: flex;
-        justify-content: center;
-    }
-    .analytics img{
-        width: 90%;
-    }
-    .analytics_btn {
-        padding: 30px 0 50px;
-    }
-    /*-------------Section 4-----------------------*/
-    .actual_users {
-        width: 85%;
-        height: 400px;
-        margin: 0 32px 90px 115px;
-    }
-    .actual_users img {
-        width: 50%;
-    }
-    .actual_users_txt {
-        width: 420px;
-        padding-right: 30px;
-    }
-    /*-------------Section 5-------------------------*/
-    .solutions {
-        padding: 0 0 0 15px;
-        width: 100%;
-        row-gap: 10px;
-    }
-    .solutions_title {
-        padding-bottom: 30px;
-    }
-    .solutions_card {
-        column-gap: 15px;
-        align-items: center;
-    }
-    .microsurveys, .questions, .testing {
-        margin-top: 65px;
-    }
-    .solutions_card>div>img{
-        width: 350px;
-    }
-    .solutions_list a {
-        margin: 20px 0 70px;
-    }
-    /*-------------Section 6-------------------------*/
-    .features {
-        height: 750px;
-    }
-    .features_title {
-        padding: 60px 100px 80px 30px;
-    }
-    .features_content {
-        padding: 0 30px;
-        justify-content: start;
-    }
-    .features_content>div>img{
-        display: none;
-    }
-    .accordion {
-        width: 450px;
-    }
-    .accordion::before {
-        width: 410px;
-    }
-    /*-------------Section 7-------------------------*/
-    .integrations {
-        padding: 50px 20px 50px 30px;
-        column-gap: 25px;
-        align-items: center;
-    }
-    .integrations img{
-        width: 100%;
-    }
-    /*-------------Section 8-------------------------*/
-    .case_study {
-        height: 500px;
-    }
-    .case_study_txt {
-        padding: 10% 30px;
-    }
-    .case_study_content_txt {
-        font-size: 28px;
-        line-height: 40px;
-        padding: 10% 20px;
-    }
-    .case_study_content_manager {
-        padding-left: 20px;
-        column-gap: 20px;
-    }
-    /*---------------Footer--------------------------*/
-    .footer_sup button {
-        margin-bottom: 50px;
-    }
-    .footer_sup::after {
-        width: 94%;
-    }
-    .footer_sub {
-        padding-left: 30px;
-        column-gap: 25px;
-    }
-    .Copyright {
-        padding-left: 205px;
-    }
-    .media {
-        padding-bottom: 50px;
-    }
-    .ico_media {
-        padding-right: 50px;
-    }
-}
-@media screen and (min-width: 902px) and (max-width:1040px) {
-    body {
-        font-size: 16px;
-    }
+/*----full-----------min-width: 768px max-width: 1040px---------------------------------------------------------*/
 
-    .wrapper {
-        padding: 0 10px;
-    }
-
-    .header_nav {
-        padding: 5px 10px;
-    }
-
-    .nav {
-        column-gap: 20px;
-    }
-
-    .nav_list {
-        column-gap: 10px;
-    }
-
-    .button_list {
-        column-gap: 10px;
-    }
-
-    .header_content {
-        height: 650px;
-        column-gap: 20px;
-        padding-top: 120px;
-    }
-
-    .header_img img {
-        width: 420px;
-        padding-top: 50px;
-    }
-
-    .background_header {
-        object-position: right
-    }
-
-    /*-------------Section 1-----------------------*/
-    .companies_block {
-        padding: 100px 0;
-    }
-
-    .companies {
-        justify-content: center;
-        flex-wrap: wrap;
-        width: 100%;
-    }
-
-    /*-------------Section 2-----------------------*/
-    .product_teams {
-        width: 98%;
-        padding: 40px 20px;
-        margin-bottom: 110px;
-    }
-
-    .product_teams img {
-        width: 90%;
-    }
-
-    .product_teams_txt {
-        flex: 90%;
-    }
-
-    /*-------------Section 3-----------------------*/
-    .analytics {
-        row-gap: 45px;
-    }
-
-    .analytics_img {
-        display: flex;
-        justify-content: center;
-    }
-
-    .analytics img {
-        width: 90%;
-    }
-
-    .analytics_btn {
-        padding: 30px 0 80px;
-    }
-
-    /*-------------Section 4-----------------------*/
-    .actual_users {
-        width: 85%;
-        height: 450px;
-        margin: 0 32px 130px 130px;
-    }
-
-    .actual_users img {
-        width: 50%;
-    }
-
-    .actual_users_txt {
-        width: 470px;
-        padding-right: 50px;
-    }
-
-    /*-------------Section 5-------------------------*/
-    .solutions {
-        padding: 0 5px 0 30px;
-        width: 100%;
-        row-gap: 10px;
-    }
-
-    .solutions_title {
-        padding-bottom: 30px;
-    }
-
-    .solutions_card {
-        column-gap: 15px;
-    }
-
-    .solutions_card > div > img {
-        width: 450px;
-    }
-
-    .solutions_list a {
-        margin: 20px 0 100px;
-    }
-
-    /*-------------Section 6-------------------------*/
-    .features {
-        height: 900px;
-    }
-
-    .features_title {
-        padding: 60px 270px 115px 30px;
-    }
-
-    .features_content {
-        padding: 0 30px;
-    }
-
-    .accordion {
-        width: 450px;
-    }
-
-    .accordion::before {
-        width: 410px;
-    }
-
-    /*-------------Section 7-------------------------*/
-    .integrations {
-        padding: 160px 20px 120px 30px;
-        column-gap: 25px;
-        align-items: center;
-    }
-
-    .integrations img {
-        width: 100%;
-    }
-
-    /*-------------Section 8-------------------------*/
-    .case_study {
-        height: 550px;
-    }
-
-    .case_study_txt {
-        padding: 70px 40px;
-    }
-
-    .case_study_content_txt {
-        font-size: 28px;
-        line-height: 40px;
-        padding: 60px 50px;
-    }
-
-    .case_study_content_manager {
-        padding-left: 40px;
-        column-gap: 20px;
-    }
-
-    /*---------------Footer--------------------------*/
-    .footer_sup button {
-        margin-bottom: 70px;
-    }
-
-    .footer_sup::after {
-        width: 94%;
-    }
-
-    .footer_sub {
-        padding-left: 30px;
-        column-gap: 40px;
-    }
-
-    .Copyright {
-        padding-left: 220px;
-    }
-
-    .media {
-        padding-bottom: 100px;
-    }
-    .ico_media {
-        padding-right: 50px;
-    }
-}
-@media screen and (min-width: 1041px) and (max-width:1290px){
-    .wrapper{
-        padding: 0 10px;
-    }
-    .nav {
-        column-gap: 50px;
-    }
-    .nav_list {
-        column-gap: 15px;
-    }
-    .background_header{
-        object-position: right
-    }
-    .header_content {
-        height: 700px;
-         column-gap: 20px;
-        padding-top: 120px;
-    }
-    /*-------------Section 1-----------------------*/
-    .companies_block {
-        padding: 140px 0;
-    }
-    /*-------------Section 2-----------------------*/
-    .product_teams {
-        width: 98%;
-        padding: 40px 10px;
-        margin-bottom: 130px;
-        justify-content: space-evenly;
-    }
-    .product_teams img{
-        width: 90%;
-    }
-    .product_teams_txt{
-        flex: 70%;
-    }
-    /*-------------Section 3-----------------------*/
-    .analytics_btn {
-        padding: 50px 0 110px;
-    }
-    /*-------------Section 4-----------------------*/
-    .actual_users {
-        width: 85%;
-        height: 500px;
-        margin: 0 32px 130px 150px;
-    }
-    .actual_users img {
-        width: 50%;
-    }
-    .actual_users_txt {
-        width: 530px;
-        padding-right: 120px;
-    }
-    /*-------------Section 5-------------------------*/
-    .solutions {
-        padding: 0 10px 0 30px;
-        width: 100%;
-        row-gap: 10px;
-    }
-    .solutions_card {
-        column-gap: 80px;
-    }
-    .solutions_list a {
-        margin: 20px 0 100px;
-    }
-    /*-------------Section 6-------------------------*/
-    .features_title {
-        padding: 95px 270px 115px 30px;
-    }
-    .features_content {
-         padding: 0 30px;
-     }
-    /*-------------Section 7-------------------------*/
-    .integrations {
-        padding: 160px 0 120px 30px;
-        column-gap: 65px;
-    }
-    /*-------------Section 8-------------------------*/
-    .case_study_txt {
-        padding: 80px 90px;
-    }
-    .case_study_content_txt {
-        font-size: 28px;
-        line-height: 40px;
-        padding: 80px 80px;
-    }
-    .case_study_content_manager {
-        padding-left: 80px;
-        column-gap: 20px;
-    }
-    /*---------------Footer--------------------------*/
-    .footer_sup button {
-        margin-bottom: 70px;
-    }
-    .footer_sup::after {
-        width: 94%;
-    }
-    .footer_sub {
-        padding-left: 30px;
-        column-gap: 60px;
-    }
-    .Copyright {
-        padding-left: 240px;
-    }
-    .media {
-        padding-bottom: 115px;
-    }
-    .ico_media {
-        padding-right: 50px;
-    }
+@media screen and (min-width: 768px) and (max-width: 1040px) {
+  .header_nav {
+    padding: 5px 10px;
+  }
+  .header_img img {
+    width: 420px;
+    padding-top: 50px;
+  }
+  .background_header {
+    object-position: right;
+  }
+  /*-------------Section 1-----------------------*/
+  .companies {
+    width: 100%;
+  }
+  /*-------------Section 2-----------------------*/
+  .product_teams img {
+    width: 90%;
+  }
+  .product_teams_txt {
+    flex: 90%;
+  }
+  .product_teams {
+    width: 98%;
+    padding: 40px 20px;
+  }
+  /*-------------Section 3-----------------------*/
+  .analytics {
+    row-gap: 45px;
+  }
+  .analytics_img {
+    display: flex;
+    justify-content: center;
+  }
+  .analytics img {
+    width: 90%;
+  }
+  /*-------------Section 4-----------------------*/
+  .actual_users {
+    width: 85%;
+  }
+  .actual_users img {
+    width: 50%;
+  }
+  /*-------------Section 5-------------------------*/
+  .solutions_title {
+    padding-bottom: 30px;
+  }
+  .solutions {
+    width: 100%;
+    row-gap: 10px;
+  }
+  .solutions_card {
+    column-gap: 15px;
+  }
+  /*-------------Section 6-------------------------*/
+  .features_content {
+    padding: 0 30px;
+  }
+  .accordion {
+    width: 450px;
+  }
+  .accordion::before {
+    width: 410px;
+  }
+  /*-------------Section 7-------------------------*/
+  .integrations {
+    padding: 160px 20px 120px 30px;
+    column-gap: 25px;
+    align-items: center;
+  }
+  .integrations img {
+    width: 100%;
+  }
+  /*-------------Section 8-------------------------*/
+  .case_study_content_txt {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .case_study_content_manager {
+    column-gap: 20px;
+  }
+  /*---------------Footer--------------------------*/
+  .footer_sup::after {
+    width: 94%;
+  }
+  .footer_sub {
+    padding-left: 30px;
+  }
+  .ico_media {
+    padding-right: 50px;
+  }
 }
 
+/*---------------min-width: 1041px max-width: 1290px---------------------------------------------------------*/
 
+@media screen and (min-width: 1041px) and (max-width: 1290px) {
+  .wrapper {
+    padding: 0 10px;
+  }
+  .nav {
+    column-gap: 50px;
+  }
+  .nav_list {
+    column-gap: 15px;
+  }
+  .background_header {
+    object-position: right;
+  }
+  .header_content {
+    height: 700px;
+    column-gap: 20px;
+    padding-top: 120px;
+  }
+  /*-------------Section 1-----------------------*/
+  .companies_block {
+    padding: 140px 0;
+  }
+  /*-------------Section 2-----------------------*/
+  .product_teams {
+    width: 98%;
+    padding: 40px 10px;
+    margin-bottom: 130px;
+    justify-content: space-evenly;
+  }
+  .product_teams img {
+    width: 90%;
+  }
+  .product_teams_txt {
+    flex: 70%;
+  }
+  /*-------------Section 3-----------------------*/
+  .analytics_btn {
+    padding: 50px 0 110px;
+  }
+  /*-------------Section 4-----------------------*/
+  .actual_users {
+    width: 85%;
+    height: 500px;
+    margin: 0 32px 130px 150px;
+  }
+  .actual_users img {
+    width: 50%;
+  }
+  .actual_users_txt {
+    width: 530px;
+    padding-right: 120px;
+  }
+  /*-------------Section 5-------------------------*/
+  .solutions {
+    padding: 0 10px 0 30px;
+    width: 100%;
+    row-gap: 10px;
+  }
+  .solutions_card {
+    column-gap: 80px;
+  }
+  .solutions_list a {
+    margin: 20px 0 100px;
+  }
+  /*-------------Section 6-------------------------*/
+  .features_title {
+    padding: 95px 270px 115px 30px;
+  }
+  .features_content {
+    padding: 0 30px;
+  }
+  /*-------------Section 7-------------------------*/
+  .integrations {
+    padding: 160px 0 120px 30px;
+    column-gap: 65px;
+  }
+  /*-------------Section 8-------------------------*/
+  .case_study_txt {
+    padding: 80px 90px;
+  }
+  .case_study_content_txt {
+    font-size: 28px;
+    line-height: 40px;
+    padding: 80px 80px;
+  }
+  .case_study_content_manager {
+    padding-left: 80px;
+    column-gap: 20px;
+  }
+  /*---------------Footer--------------------------*/
+  .footer_sup button {
+    margin-bottom: 70px;
+  }
+  .footer_sup::after {
+    width: 94%;
+  }
+  .footer_sub {
+    padding-left: 30px;
+    column-gap: 60px;
+  }
+  .Copyright {
+    padding-left: 240px;
+  }
+  .media {
+    padding-bottom: 115px;
+  }
+  .ico_media {
+    padding-right: 50px;
+  }
+}
 
+/*---------------min-width: 902px max-width: 1040px---------------------------------------------------------*/
 
+@media screen and (min-width: 902px) and (max-width: 1040px) {
+  body {
+    font-size: 16px;
+  }
+  .wrapper {
+    padding: 0 10px;
+  }
+  .nav {
+    column-gap: 20px;
+  }
+  .nav_list {
+    column-gap: 10px;
+  }
+  .button_list {
+    column-gap: 10px;
+  }
+  .header_content {
+    column-gap: 20px;
+    height: 650px;
+    padding-top: 120px;
+  }
+  /*-------------Section 1-----------------------*/
+  .companies_block {
+    padding: 100px 0;
+  }
 
+  /*-------------Section 2-----------------------*/
+  .product_teams {
+    margin-bottom: 110px;
+  }
+  /*-------------Section 3-----------------------*/
+  .analytics_btn {
+    padding: 30px 0 80px;
+  }
 
+  /*-------------Section 4-----------------------*/
+  .actual_users {
+    height: 450px;
+    margin: 0 32px 130px 130px;
+  }
+  .actual_users_txt {
+    width: 470px;
+    padding-right: 50px;
+  }
 
+  /*-------------Section 5-------------------------*/
+  .solutions {
+    padding: 0 5px 0 30px;
+  }
+  .solutions_card > div > img {
+    width: 450px;
+  }
+  .solutions_list a {
+    margin: 20px 0 100px;
+  }
+  /*-------------Section 6-------------------------*/
+  .features {
+    height: 900px;
+  }
+  .features_title {
+    padding: 60px 270px 115px 30px;
+  }
+  /*-------------Section 7-------------------------*/
+  .integrations {
+    padding: 160px 20px 120px 30px;
+  }
+  /*-------------Section 8-------------------------*/
+  .case_study {
+    height: 550px;
+  }
+  .case_study_txt {
+    padding: 70px 40px;
+  }
+  .case_study_content_txt {
+    padding: 60px 50px;
+  }
+  .case_study_content_manager {
+    padding-left: 40px;
+  }
+  /*---------------Footer--------------------------*/
+  .footer_sup button {
+    margin-bottom: 70px;
+  }
+  .footer_sub {
+    column-gap: 40px;
+  }
+  .Copyright {
+    padding-left: 220px;
+  }
+  .media {
+    padding-bottom: 100px;
+  }
+}
 
+/*---------------min-width: 768px max-width: 901px---------------------------------------------------------*/
 
+@media screen and (min-width: 768px) and (max-width: 901px) {
+  body {
+    font-size: 14px;
+  }
+  .wrapper {
+    padding: 0 5px;
+  }
+  .header_content {
+    height: 570px;
+    column-gap: 20px;
+    padding: 90px 5px 0;
+  }
+  /*-------------Section 1-----------------------*/
+  .companies_block {
+    padding: 50px 0;
+  }
+  /*-------------Section 2-----------------------*/
+  .product_teams {
+    margin-bottom: 50px;
+  }
+  /*-------------Section 3-----------------------*/
+  .analytics_btn {
+    padding: 30px 0 50px;
+  }
+  /*-------------Section 4-----------------------*/
+  .actual_users {
+    width: 85%;
+    height: 400px;
+    margin: 0 32px 90px 115px;
+  }
+  .actual_users img {
+    width: 50%;
+  }
+  .actual_users_txt {
+    width: 420px;
+    padding-right: 30px;
+  }
+  /*-------------Section 5-------------------------*/
+  .solutions {
+    padding: 0 0 0 15px;
+    width: 100%;
+    row-gap: 10px;
+  }
+  .solutions_title {
+    padding-bottom: 30px;
+  }
+  .solutions_card {
+    column-gap: 15px;
+    align-items: center;
+  }
+  .microsurveys,
+  .questions,
+  .testing {
+    margin-top: 65px;
+  }
+  .solutions_card > div > img {
+    width: 350px;
+  }
+  .solutions_list a {
+    margin: 20px 0 70px;
+  }
+  /*-------------Section 6-------------------------*/
+  .features {
+    height: 750px;
+  }
+  .features_title {
+    padding: 60px 100px 80px 30px;
+  }
+  .features_content {
+    padding: 0 30px;
+    justify-content: start;
+  }
+  .features_content > div > img {
+    display: none;
+  }
+  .accordion {
+    width: 450px;
+  }
+  .accordion::before {
+    width: 410px;
+  }
+  /*-------------Section 7-------------------------*/
+  .integrations {
+    padding: 50px 20px 50px 30px;
+    column-gap: 25px;
+    align-items: center;
+  }
+  .integrations img {
+    width: 100%;
+  }
+  /*-------------Section 8-------------------------*/
+  .case_study {
+    height: 500px;
+  }
+  .case_study_txt {
+    padding: 10% 30px;
+  }
+  .case_study_content_txt {
+    font-size: 28px;
+    line-height: 40px;
+    padding: 10% 20px;
+  }
+  .case_study_content_manager {
+    padding-left: 20px;
+    column-gap: 20px;
+  }
+  /*---------------Footer--------------------------*/
+  .footer_sup button {
+    margin-bottom: 50px;
+  }
+  .footer_sup::after {
+    width: 94%;
+  }
+  .footer_sub {
+    padding-left: 30px;
+    column-gap: 25px;
+  }
+  .Copyright {
+    padding-left: 205px;
+  }
+  .media {
+    padding-bottom: 50px;
+  }
+  .ico_media {
+    padding-right: 50px;
+  }
+}
 
+/*---------------max-width: 767px---------------------------------------------------------*/
 
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 13px;
+  }
+  .wrapper {
+    min-width: 320px;
+  }
+  .header_nav {
+    padding: 5px 10px;
+  }
+  .header_content {
+    height: 450px;
+    padding: 90px 5px 0;
+    column-gap: 0;
+  }
+  .header_txt {
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header_txt h4 {
+    color: var(--black-color);
+  }
+  .header_img img {
+    display: none;
+  }
+  .btn_header_content button:first-child {
+    border: 1px solid var(--black-color);
+    flex: 0 0 auto;
+  }
+  .btn_header_content button:last-child {
+    background: #ffffff;
+    flex: 0 0 auto;
+  }
+  .background_header {
+    object-position: right;
+  }
+  .main {
+    padding: 0 10px;
+  }
+  /*-------------Section 1-----------------------*/
+  .companies_block {
+    padding: 30px 0;
+  }
+  .companies_title {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .companies {
+    width: 100%;
+  }
+  .companies > div {
+    width: 120px;
+  }
+  .companies > div > img {
+    width: 100%;
+  }
+  /*-------------Section 2-----------------------*/
+  .product_teams {
+    flex-direction: column-reverse;
+    width: 98%;
+    padding: 20px 20px;
+    margin-bottom: 30px;
+  }
+  .product_teams img {
+    width: 90%;
+  }
+  .product_teams_txt h3 {
+    padding-bottom: 15px;
+  }
+  .product_teams_txt {
+    width: 100%;
+  }
+  /*-------------Section 3-----------------------*/
+  .analytics {
+    row-gap: 15px;
+  }
+  .analytics_img {
+    display: flex;
+    justify-content: center;
+  }
+  .analytics_txt {
+    width: 95%;
+    text-align: center;
+  }
+  .analytics img {
+    width: 95%;
+  }
+  .analytics_btn {
+    padding: 15px 0 10px;
+  }
+  /*-------------Section 4-----------------------*/
+  .actual_users {
+    width: 100%;
+    height: 300px;
+    margin: 30px 0;
+  }
+  .actual_users img {
+    display: none;
+  }
+  .actual_users_txt {
+    width: 95%;
+    padding-right: 20px;
+  }
+  /*-------------Section 5-------------------------*/
+  .solutions {
+    padding: 0 5px;
+    width: 100%;
+    row-gap: 10px;
+  }
+  .solutions_title {
+    width: 98%;
+    padding-bottom: 15px;
+  }
+  .solutions_card {
+    column-gap: 15px;
+    align-items: center;
+  }
+  .microsurveys,
+  .questions,
+  .testing {
+    margin-top: 65px;
+  }
+  .solutions_card > div > img {
+    width: 350px;
+  }
+  .solutions_list a {
+    margin: 20px 0 70px;
+  }
+  /*-------------Section 6-------------------------*/
+  .features {
+    height: 700px;
+  }
+  .features_title {
+    padding: 10px 10px 40px;
+  }
+  .features_content {
+    padding: 0;
+    justify-content: start;
+  }
+  .features_content > div > img {
+    display: none;
+  }
+  .accordion {
+    width: 100%;
+  }
+  .accordion::before {
+    width: 90%;
+  }
+  /*-------------Section 7-------------------------*/
+  .integrations {
+    padding: 50px 10px 30px;
+    row-gap: 25px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .integrations_txt {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .integrations img {
+    width: 90%;
+    padding-left: 10%;
+  }
+  /*-------------Section 8-------------------------*/
+  .case_study {
+    height: 800px;
+    width: 100%;
+    flex-direction: column;
+  }
+  .case_study_txt {
+    padding: 10% 30px;
+    width: 100%;
+    height: 50%;
+  }
+  .case_study_content_txt {
+    font-size: 28px;
+    line-height: 40px;
+    padding: 10% 20px;
+  }
+  .case_study_content {
+    width: 100%;
+  }
+  .case_study_content_manager {
+    padding: 0 0 20px 20px;
+    column-gap: 20px;
+  }
+  /*---------------Footer--------------------------*/
+  .footer {
+    row-gap: 55px;
+  }
+  .footer_sup {
+    padding-top: 20px;
+  }
+  .footer_sup button {
+    margin-bottom: 20px;
+  }
+  .footer_sup_txt {
+    width: 98%;
+  }
+  .footer_sup::after {
+    width: 94%;
+  }
+  .footer_sub {
+    padding: 0 5%;
+    column-gap: 10px;
+    position: relative;
+  }
+  .footer_sub img {
+    position: absolute;
+    top: -50px;
+    left: 15px;
+  }
+  .Copyright {
+    padding-left: 10px;
+  }
+  .media {
+    padding-bottom: 20px;
+  }
+  .ico_media {
+    padding-right: 30px;
+  }
+}
 
+/*---------------max-width: 375px---------------------------------------------------------*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media screen and (max-width: 375px) {
+  body {
+    font-size: 12px;
+  }
+  .title60px {
+    font-size: 3em;
+  }
+  .header_content {
+    height: 500px;
+  }
+  .btn_header_content {
+    column-gap: 5px;
+  }
+  /*-------------Section 6-------------------------*/
+  .features {
+    height: 650px;
+  }
+  /*-------------Section 8-------------------------*/
+  .case_study_txt {
+    padding: 10% 30px;
+  }
+  .case_study_content_txt {
+    font-size: 22px;
+    padding: 5% 15px;
+  }
+  .case_study_content_manager {
+    padding-left: 10px;
+  }
+  /*---------------Footer--------------------------*/
+  .ico_media a {
+    padding-left: 10px;
+  }
+}
